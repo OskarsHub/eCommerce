@@ -1,0 +1,194 @@
+@import url("https://fonts.googleapis.com/css2?family=Sora:wght@500&display=swap");
+
+body {
+  font-family: "Sora", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
+}
+
+header {
+  background-color: #333;
+  padding: 20px;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  background-color: #333;
+}
+
+nav li {
+  margin: 10px;
+}
+
+nav a {
+  display: block;
+  padding: 10px;
+  color: #fff;
+  text-decoration: none;
+  transition: background-color 0.3s;
+  border-radius: 20px;
+}
+
+nav a:hover {
+  background-color: #555;
+}
+
+nav a:active {
+  background-color: #888;
+}
+
+.heroContainer {
+  position: relative;
+  text-align: center;
+}
+
+.bannerH1 {
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 36px;
+  color: #fff;
+}
+
+.heroImage {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.shopList {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 20px;
+  padding: 20px;
+  margin-top: 50px;
+  align-items: center;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.ListArticle {
+  text-align: center;
+  background-color: #fff;
+  padding: 30px;
+  margin: 5px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  height: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.ListArticle:hover {
+  transform: scale(1.03);
+}
+
+.ListImage {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+.ListText {
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+.ListPrice {
+  font-weight: bold;
+  margin-top: 5px;
+  color: #333;
+}
+
+.pagenumbers {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.pagenumbers button {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  appearance: none;
+  border: none;
+  cursor: pointer;
+  margin: 5px;
+  margin-bottom: 40px;
+  transition: 0.4s;
+  color: #333;
+  background-color: #f9f9f9;
+  font-size: 16px;
+}
+
+.pagenumbers button:hover {
+  background-color: #333;
+  color: #fff;
+}
+
+.pagenumbers button.active {
+  background-color: #333;
+  color: #fff;
+}
+
+@media screen and (max-width: 965px) {
+  .shopList {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    max-width: 780px;
+  }
+
+  .bannerH1 {
+    font-size: 28px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .bannerH1 {
+    position: static;
+    top: auto;
+    left: auto;
+    transform: none;
+    font-size: 28px;
+    color: #333;
+  }
+
+  .ListArticle {
+    font-size: 14px;
+    height: auto;
+  }
+
+  .ListText {
+    font-size: 12px;
+  }
+
+  .pagenumbers {
+    margin-top: 10px;
+  }
+
+  .pagenumbers button {
+    width: 30px;
+    height: 30px;
+    font-size: 12px;
+  }
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
